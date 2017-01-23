@@ -4,17 +4,17 @@ const Script = require('smooch-bot').Script;
 
 module.exports = new Script({
     processing: {
-        prompt: (bot) => bot.say('Beep boop...'),
+        //prompt: (bot) => bot.say('Beep boop...'),
         receive: () => 'processing'
     },
 
     start: {
-        prompt: (bot) => bot.say('Hi'),
         receive: (bot) => {
-            return bot.say('Hi! I\'m Smooch Bot!')
+            return bot.say("Hello I'm 300SunsetBot! I understand you will be visiting on September 7. Just type CHAT to continue to see what I can help you with.")
                 .then(() => 'askName');
         }
     },
+
 
     askName: {
         prompt: (bot) => bot.say('What\'s your name?'),
